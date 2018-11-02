@@ -39,10 +39,27 @@ header {
 }
 
 section {
+    position: relative;
     width: 100%;
     @include flex;
     overflow: hidden;
+    position: relative;
     background: #eee;
+    .pullDown,
+    .pullUp {
+        position: absolute;
+        width: 100%;
+        height: pxTorem(44px);
+        line-height: pxTorem(44px);
+        font-size: pxTorem(18px);
+        text-align: center;
+    }
+    .pullDown {
+        top: pxTorem(-44px);
+    }
+    .pullUp {
+        bottom: pxTorem(-44px);
+    }
     .banner {
         width: 100%;
         img {
